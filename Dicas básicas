@@ -1,0 +1,6 @@
+#  nmap ferramenta que auxulia a explorar a rede pode ser instalado ou usada o Kali Linux
+nmap -h    #mostra as opções de uso e paramentros
+nmap -sn 192.168.10.0/24   #verificar os dispositivos ativos na rede (usado em Pentast) quando usamos 
+# um comando com várias funções o rsultado pode ser mais demorado.
+nmap -sn -n 192.168.12/24 #verificar os dispositivos ativos sem resolver DNS
+nmap 192.168.10.100        (18:50) 
