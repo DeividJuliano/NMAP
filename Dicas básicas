@@ -5,3 +5,10 @@ nmap -sn 192.168.10.0/24   #verificar os dispositivos ativos na rede (usado em P
 nmap -sn -n 192.168.12/24   #verificar os dispositivos ativos sem resolver DNS
 nmap -sU 192.168.10.100   #verificar o ip usando o protocolo UDP, também necessário para dns
 nmap 192.168.10.100 -V    #verificar informando em tempo real o que está sendo feito
+
+
+
+#  NMAP SCRIPT ENGINE
+# Para usar o NMAP SCRIPT ENGINE é necessário entrar na pasta de script do nmap no Kali Linux
+cd /usr/share/nmap/scripts     #acesso a pasta de scripts, nessa pasta há scripts para achar 
+# vulnerabilidades em roteadores de marcas específicas entre outros  (3:30)
