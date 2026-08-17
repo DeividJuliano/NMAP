@@ -1,5 +1,6 @@
 #  nmap ferramenta que auxilia a explorar a rede pode ser instalado ou usada o Kali Linux
 nmap -h    #mostra as opções de uso e paramentros
+namp 10.10.20.122    #informar as portas e serviço deste host  
 nmap -sn 192.168.10.0/24   #verificar os dispositivos ativos na rede (usado em Pentast) quando usamos 
 # um comando com várias funções o rsultado pode ser mais demorado.
 nmap -sn -n 192.168.12/24   #verificar os dispositivos ativos sem resolver DNS
@@ -11,4 +12,11 @@ nmap 192.168.10.100 -V    #verificar informando em tempo real o que está sendo 
 #  NMAP SCRIPT ENGINE
 # Para usar o NMAP SCRIPT ENGINE é necessário entrar na pasta de script do nmap no Kali Linux
 cd /usr/share/nmap/scripts     #acesso a pasta de scripts, nessa pasta há scripts para achar 
-# vulnerabilidades em roteadores de marcas específicas entre outros  (3:30)
+# vulnerabilidades em roteadores de marcas específicas entre outros  
+nmap --scripthelp http-dlink-backdoor.nse  # informar o que script pode fazer e como usa-lo
+nmap 192.168.15.0/24 -p 25 --script banner.nse  # será realizado uma varredura na rede, na porta 25 (smtp)
+# usando o script banner  (9:24)
+nmap --script=nfs-ls 192.168.0.18  # faz a varredura das portas e informa se há compartilhamento
+# de volume e tipos de arquivos (nfs porta 2049, compartilhamento de arquivo) 13:25
+
+
